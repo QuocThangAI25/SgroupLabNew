@@ -1,0 +1,237 @@
+.ds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 40px;
+}
+.ds-header1 {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+  background-color: #fff;
+  padding: 20px 0;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+  transition-property: all;
+  transition-timing-function: ease;
+}
+.ds-header1 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-right: 12px;
+}
+.ds-media {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ds-media li a {
+  border-radius: 50%;
+  background-color: darksalmon;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 16px;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1200px;
+}
+.left {
+  flex: 0 0 30%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  margin: 100px auto 0;
+  padding: 0 20px;
+}
+.left img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 7%;
+}
+
+.right span {
+  display: block;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.right {
+  display: flex;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 60px;
+  color: #000;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 50px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Inter", sans-serif;
+}
+.list1 {
+  list-style: none;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.list1 strong {
+  display: block;
+  color: lightcoral;
+  font-size: 40px;
+  font-weight: 200;
+  margin-right: 100px;
+}
+.list1 span {
+  font-size: 16px;
+}
+.content2 {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: indianred solid;
+  font-size: 20px;
+  margin-left: 50px;
+  margin-top: 30px;
+}
+.about p {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #333;
+  text-align: justify;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.ds-button {
+  text-align: center;
+  margin: 80px;
+}
+.button {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #f26464;
+  border: 2px solid #f26464;
+  padding: 17px 20px;
+  letter-spacing: 3px;
+  font-size: 12px;
+  border-radius: 60px;
+  line-height: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.content3 {
+  display: inline-block;
+  text-transform: uppercase;
+  border-bottom: indianred solid;
+  width: 175px;
+  font-size: 20px;
+  margin-left: 50px;
+}
+.ds-skill-list li {
+  list-style: none;
+  display: inline-block;
+  border: 1px solid gray;
+  border-radius: 50px;
+  font-weight: 200;
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+.work {
+  color: #373737;
+  font-weight: 500;
+  font-size: 18px;
+  padding-bottom: 30px;
+}
+.work-experience p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+}
+.work-experience ul {
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+.work-experience .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+.row {
+  display: flex;
+}
+.work-experience h2.content2 {
+  padding-top: 20px;
+}
+.work-experience .left1 {
+  margin-left: 50px;
+}
+.work-experience .right1 {
+  margin-left: 50px;
+}
+.work-experience ul li {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 20px;
+}
+.left1,
+.right1 {
+  flex: 0 0 48%;
+  display: flex;
+  flex-direction: column;
+}
