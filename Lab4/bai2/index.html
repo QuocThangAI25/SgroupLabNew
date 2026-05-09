@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Position 2</title>
+  </head>
+  <style>
+    body {
+      background-color: honeydew;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      width: 500px;
+      height: 400px;
+      background-color: aqua;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 10%;
+      position: relative;
+    }
+    .container .cl-image img {
+      object-fit: cover;
+      width: 500px;
+      height: 400px;
+      border-radius: 10%;
+      position: relative;
+    }
+    .content {
+      transform: translate(-50%, -30px);
+      transition: 0.8s;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: white;
+      /* opacity: 0; */
+      text-transform: uppercase;
+      width: 90%;
+      text-align: center;
+    }
+    .content h1 {
+      font-size: 27px;
+      font-weight: normal;
+      font-family:
+        "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px #423f3f;
+      transition: 0.5s;
+    }
+    .content span {
+      font-weight: bold;
+    }
+    .content .cl-border {
+      width: 100px;
+      height: 100px;
+      border: 2px solid #fff;
+      transform: translate(-50%, -50%) rotate(45deg);
+      transition: 0.8s;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transition: 0.5s;
+      box-sizing: border-box;
+      opacity: 0;
+    }
+    .cl-list .list-left {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+    .cl-list .list-right {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 100%;
+    }
+    .cl-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      width: 100%;
+      transform: rotate(-45deg);
+      opacity: 1;
+      padding: 0;
+      box-sizing: border-box;
+      transition: 0.5s;
+    }
+    .cl-list i {
+      transform: rotate(0deg);
+      font-size: 15px;
+      display: block;
+    }
+    .cl-image:hover h1 {
+      opacity: 0.1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 20px;
+    }
+    .cl-image:hover .cl-border {
+      opacity: 1;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cl-image:hover .cl-list {
+      opacity: 1;
+      position: absolute;
+      transform: rotate(-45deg);
+      padding: 60px;
+    }
+    .cl-image:hover i {
+      font-size: 30px;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="cl-image">
+        <img
+          src="https://images.pexels.com/photos/37069157/pexels-photo-37069157.jpeg"
+          alt="None"
+        />
+        <div class="content">
+          <h1>tender<span>hera</span></h1>
+          <div class="cl-border">
+            <div class="cl-list">
+              <div class="list-left">
+                <div><i class="fa-brands fa-apple"></i></div>
+                <div><i class="fa-brands fa-facebook"></i></div>
+              </div>
+              <div class="list-right">
+                <div><i class="fa-brands fa-github"></i></div>
+                <div><i class="fa-brands fa-google"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
