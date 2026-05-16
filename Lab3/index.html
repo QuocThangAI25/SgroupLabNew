@@ -12,16 +12,19 @@
   </head>
   <body>
     <header class="header">
-      <div class="ds-header">
-        <a href="index.html" class="ds-header1"><span>J</span> JASON STROFF</a>
+      <div class="cl-header">
+        <a href="index.html" class="ds-header1"
+          ><span class="Json">J</span>
+          <span class="text-hidden">JASON STROFF</span></a
+        >
         <ul class="ds-media">
-          <li>
+          <li class="icon1">
             <a href="#"><i class="fab fa-github"></i></a>
           </li>
-          <li>
+          <li class="icon2">
             <a href="#"><i class="fab fa-dribbble"></i></a>
           </li>
-          <li>
+          <li class="icon3">
             <a href="#"><i class="fab fa-linkedin-in"></i></a>
           </li>
         </ul>
@@ -66,7 +69,7 @@
     <div class="list-skill">
       <div class="container">
         <div class="left1">
-          <h2 class="content3">core skills</h2>
+          <h2 class="content3"><span>core skills</span></h2>
           <ul class="ds-skill-list">
             <li>JavaScript</li>
             <li>Node.js</li>
@@ -80,7 +83,7 @@
           </ul>
         </div>
         <div class="right1">
-          <h2 class="content3">orther skills</h2>
+          <h2 class="content3"><span>orther skills</span></h2>
           <ul class="ds-skill-list">
             <li>Storyblok</li>
             <li>PWAs</li>
@@ -142,5 +145,109 @@
         </div>
       </div>
     </div>
+    <div class="work-final">
+      <h2 class="content2">Latest works</h2>
+      <div class="container-1">
+        <div class="row">
+          <div class="left1-1">
+            <div class="content1">
+              <h3>Tripy mobile app</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                quis sem maximus, ornare metus ut, congue enim. Sed fermentum
+                nulla tellus, quis efficitur mauris tristique efficitur. Aliquam
+                rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci
+                non sodales.
+              </p>
+              <div class="button-n">
+                <a href="#" class="button">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="right1-1">
+            <img
+              src="https://cdn.dribbble.com/userupload/16194896/file/original-f26832c43ae169a6f1fe7983221ac411.png?resize=752x&vertical=center"
+              class="image"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container-1">
+        <div class="row">
+          <div class="left1-1">
+            <div class="content1">
+              <h3>Hello mobile app</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                quis sem maximus, ornare metus ut, congue enim. Sed fermentum
+                nulla tellus, quis efficitur mauris tristique efficitur. Aliquam
+                rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci
+                non sodales.
+              </p>
+              <div class="button-n">
+                <a href="#" class="button">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="right1-1">
+            <img
+              src="https://assets.autobuzz.my/wp-content/uploads/2023/09/14162603/2023-Smart-Malaysia-Hello-Smart-App-3-768x432.jpg"
+              class="image"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="container-1">
+        <div class="row">
+          <div class="left1-1">
+            <div class="content1">
+              <h3>Cute cookies app</h3>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
+                quis sem maximus, ornare metus ut, congue enim. Sed fermentum
+                nulla tellus, quis efficitur mauris tristique efficitur. Aliquam
+                rhoncus sem sed ullamcorper venenatis. Aenean malesuada eu orci
+                non sodales.
+              </p>
+              <div class="button-n">
+                <a href="#" class="button">details</a>
+              </div>
+            </div>
+          </div>
+          <div class="right1-1">
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1200/1*nc3TLbifGa8uttpd1sLzCg.jpeg"
+              class="image"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
+  <footer class="cl-footer">
+    <div class="content-n">
+      <p>Stay in touch</p>
+      <span class="content-n1">Ready to talk?</span>
+      <span class="content-n2">Feel free to conteact us</span>
+      <div class="button-n1">lets talk</div>
+      <div class="cl-final">
+        © 2022 All rights reserved. Free minimal bootstrap template by
+        <span><a href="https://designstub.com/">Designstub</a></span
+        >.
+      </div>
+    </div>
+  </footer>
+  <script>
+    window.addEventListener("scroll", function () {
+      const header = document.querySelector(".header");
+      if (window.scrollY > 0) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+  </script>
 </html>
