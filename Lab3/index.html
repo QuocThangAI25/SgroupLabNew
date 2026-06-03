@@ -9,9 +9,18 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+    />
   </head>
   <body>
-    <header class="header">
+    <header class="header hide">
       <div class="cl-header">
         <a href="index.html" class="ds-header1"
           ><span class="Json">J</span>
@@ -164,12 +173,22 @@
               </div>
             </div>
           </div>
-          <div class="right1-1">
-            <img
-              src="https://cdn.dribbble.com/userupload/16194896/file/original-f26832c43ae169a6f1fe7983221ac411.png?resize=752x&vertical=center"
-              class="image"
-              alt=""
-            />
+          <div class="slider">
+            <div>
+              <img
+                src="https://cdn.dribbble.com/userupload/16194896/file/original-f26832c43ae169a6f1fe7983221ac411.png?resize=752x&vertical=center"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/37420378/pexels-photo-37420378.jpeg"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/12238319/pexels-photo-12238319.jpeg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -190,12 +209,22 @@
               </div>
             </div>
           </div>
-          <div class="right1-1">
-            <img
-              src="https://assets.autobuzz.my/wp-content/uploads/2023/09/14162603/2023-Smart-Malaysia-Hello-Smart-App-3-768x432.jpg"
-              class="image"
-              alt=""
-            />
+          <div class="slider">
+            <div>
+              <img
+                src="https://cdn.dribbble.com/userupload/16194896/file/original-f26832c43ae169a6f1fe7983221ac411.png?resize=752x&vertical=center"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/37420378/pexels-photo-37420378.jpeg"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/12238319/pexels-photo-12238319.jpeg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -216,12 +245,22 @@
               </div>
             </div>
           </div>
-          <div class="right1-1">
-            <img
-              src="https://miro.medium.com/v2/resize:fit:1200/1*nc3TLbifGa8uttpd1sLzCg.jpeg"
-              class="image"
-              alt=""
-            />
+          <div class="slider">
+            <div>
+              <img
+                src="https://cdn.dribbble.com/userupload/16194896/file/original-f26832c43ae169a6f1fe7983221ac411.png?resize=752x&vertical=center"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/6010420/pexels-photo-6010420.jpeg"
+              />
+            </div>
+            <div>
+              <img
+                src="https://images.pexels.com/photos/12238319/pexels-photo-12238319.jpeg"
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -241,13 +280,48 @@
     </div>
   </footer>
   <script>
-    window.addEventListener("scroll", function () {
-      const header = document.querySelector(".header");
-      if (window.scrollY > 0) {
-        header.classList.add("scrolled");
+    const header = document.querySelector(".header");
+    let lastScroll = window.scrollY;
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+      if (currentScroll > lastScroll) {
+        header.classList.add("hide");
+        header.classList.remove("show");
       } else {
-        header.classList.remove("scrolled");
+        header.classList.remove("hide");
+        header.classList.add("show");
       }
+    });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <script>
+    $(".slider").slick();
+  </script>
+  <script>
+    $(".slider").slick({
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      arrows: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  </script>
+  <script>
+    $(".slider").slick({
+      slidesToShow: 4,
+
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+          },
+        },
+      ],
     });
   </script>
 </html>
