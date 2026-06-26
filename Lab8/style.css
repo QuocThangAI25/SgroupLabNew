@@ -1,0 +1,294 @@
+ /* ===== PHẦN 1: CSS - TẤT CẢ STYLE ===== */
+        
+        /* Đặt lại mặc định cho toàn bộ trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Trang nền với gradient màu tím xanh */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* Khung chính của game */
+        .game-container {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 700px;
+            width: 100%;
+        }
+
+        /* ===== PHẦN HEADER ===== */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .header h1 {
+            color: white;
+            font-size: 28px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .level-info {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* ===== BẢNG THỐNG KÊ ===== */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 12px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            color: white;
+            font-size: 16px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .stats span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .stats .number {
+            font-weight: bold;
+            color: #ffd700;
+            font-size: 20px;
+        }
+
+        /* ===== BẢNG THẺ ===== */
+        .board {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 20px;
+            justify-content: center;
+        }
+
+        /* Mỗi thẻ */
+        .card {
+            aspect-ratio: 1 / 1;
+            background: linear-gradient(145deg, #2d3436, #1a1a2e);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            user-select: none;
+            position: relative;
+            min-height: 70px;
+        }
+
+        /* Hiệu ứng khi di chuột vào thẻ chưa lật */
+        .card:hover:not(.flipped):not(.matched) {
+            transform: scale(1.05);
+            box-shadow: 0 6px 25px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Thẻ đã lật - hiển thị icon */
+        .card.flipped {
+            background: white;
+            transform: rotateY(180deg);
+        }
+
+        /* Thẻ đã ghép đôi */
+        .card.matched {
+            background: #4CAF50;
+            cursor: default;
+            opacity: 0.7;
+            transform: scale(0.95);
+            pointer-events: none;
+        }
+
+        /* ===== NÚT ĐIỀU KHIỂN ===== */
+        .controls {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            color: #667eea;
+        }
+
+        .controls button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
+        }
+
+        .controls button:active {
+            transform: scale(0.95);
+        }
+
+        /* ===== POPUP CHIẾN THẮNG ===== */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+        }
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+        .popup-content {
+            background: white;
+            padding: 40px 50px;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+            animation: popIn 0.4s ease;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8) translateY(30px);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1) translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .popup-content h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .popup-content .emoji-big {
+            font-size: 64px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .popup-content p {
+            font-size: 18px;
+            color: #555;
+            margin: 8px 0;
+        }
+
+        .popup-content .stars {
+            font-size: 40px;
+            margin: 15px 0;
+        }
+
+        .popup-content button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 5px;
+        }
+
+        .popup-content .btn-next {
+            background: #667eea;
+            color: white;
+        }
+
+        .popup-content .btn-next:hover {
+            background: #5a67d8;
+            transform: scale(1.05);
+        }
+
+        .popup-content .btn-retry {
+            background: #e2e8f0;
+            color: #333;
+        }
+
+        .popup-content .btn-retry:hover {
+            background: #cbd5e0;
+            transform: scale(1.05);
+        }
+
+        /* ===== RESPONSIVE - TƯƠNG THÍCH ĐIỆN THOẠI ===== */
+        @media (max-width: 500px) {
+            .game-container {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 20px;
+            }
+
+            .card {
+                font-size: 24px;
+                min-height: 60px;
+            }
+
+            .stats {
+                font-size: 14px;
+                padding: 8px;
+            }
+
+            .controls button {
+                padding: 10px 16px;
+                font-size: 14px;
+            }
+
+            .popup-content {
+                padding: 30px 20px;
+                margin: 20px;
+            }
+
+            .popup-content h2 {
+                font-size: 24px;
+            }
+        }
+
+        /* Khi màn hình rất nhỏ */
+        @media (max-width: 380px) {
+            .card {
+                font-size: 18px;
+                min-height: 50px;
+            }
+            .board {
+                gap: 6px;
+            }
+        }

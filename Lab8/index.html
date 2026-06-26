@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🎴 Game Lật Thẻ - Nhiều Level</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <div class="header">
+        <h1>🎴 Lật Thẻ</h1>
+        <div class="level-info">Level <span id="levelDisplay">1</span></div>
+      </div>
+
+      <!-- Bảng thống kê -->
+      <div class="stats">
+        <span
+          >🎯 Đã ghép: <span class="number" id="pairsCount">0</span>/<span
+            id="totalPairs"
+            >0</span
+          ></span
+        >
+        <span>👆 Lượt lật: <span class="number" id="movesCount">0</span></span>
+        <span
+          >⏱️ Thời gian: <span class="number" id="timerDisplay">0</span>s</span
+        >
+      </div>
+
+      <!-- Bảng thẻ -->
+      <div class="board" id="board"></div>
+
+      <!-- Nút điều khiển -->
+      <div class="controls">
+        <button onclick="resetCurrentLevel()">🔄 Chơi lại</button>
+        <button onclick="nextLevel()">➡️ Level tiếp</button>
+        <button onclick="showLevelMenu()">📋 Chọn level</button>
+      </div>
+    </div>
+
+    <!-- Popup chiến thắng -->
+    <div class="popup-overlay" id="winPopup">
+      <div class="popup-content">
+        <span class="emoji-big">🎉</span>
+        <h2>Chúc mừng!</h2>
+        <p>Bạn đã hoàn thành Level <span id="winLevel">1</span></p>
+        <p>Số lượt lật: <strong id="winMoves">0</strong></p>
+        <p>Thời gian: <strong id="winTime">0</strong> giây</p>
+        <div class="stars" id="winStars">⭐⭐⭐</div>
+        <div>
+          <button class="btn-next" onclick="nextLevel()">
+            ➡️ Level tiếp theo
+          </button>
+          <button class="btn-retry" onclick="resetCurrentLevel()">
+            🔄 Chơi lại
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

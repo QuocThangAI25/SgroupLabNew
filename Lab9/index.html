@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lật Ảnh - Lật Chữ</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>🐾 Lật Ảnh - Lật Chữ</h1>
+
+      <!-- Chọn chủ đề -->
+      <div class="theme-selector">
+        <label>📖 Chủ đề:</label>
+        <select id="themeSelect" onchange="changeTheme()">
+          <option value="animal">🐶 Động vật</option>
+          <option value="fruit">🍎 Trái cây</option>
+          <option value="food">🍕 Đồ ăn</option>
+          <option value="vehicle">🚗 Phương tiện</option>
+          <option value="color">🎨 Màu sắc</option>
+          <option value="emotion">😊 Cảm xúc</option>
+          <option value="all">📚 Tất cả</option>
+        </select>
+      </div>
+
+      <div class="stats">
+        <span>📌 <span id="pairs">0</span>/6</span>
+        <span>👆 <span id="moves">0</span></span>
+        <span>⭐ <span id="score">0</span></span
+        >p
+      </div>
+
+      <div class="board" id="board"></div>
+
+      <div class="controls">
+        <button onclick="resetGame()">🔄 Chơi lại</button>
+        <button onclick="nextRound()">➡️ Tiếp</button>
+      </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2>🎉 Hoàn thành!</h2>
+        <p>⭐ Điểm: <span id="finalScore">0</span></p>
+        <p>👆 Lượt lật: <span id="finalMoves">0</span></p>
+        <button onclick="resetGame()">🔄 Chơi lại</button>
+        <button onclick="nextRound()">➡️ Tiếp</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
