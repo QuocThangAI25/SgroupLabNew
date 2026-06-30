@@ -15,22 +15,34 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Fruktur:ital@0;1&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
+    <div id="preloader">
+  <div class="loader-content">
+    <h1 class="loader-logo"><img src="images/images-removebg-preview.png" alt=""></h1>
+    <div class="loader-line-container">
+      <div id="loader-progress-bar"></div>
+    </div>
+  </div>
+</div>
+    <div id="scroll-progress-container">
+  <div id="scroll-progress-bar"></div>
+</div>
     <header>
       <div class="class-header">
         <div class="class-logo-header">
           <a href=""><img src="images/images-removebg-preview.png" alt="" /></a>
         </div>
         <div class="class-list-header">
-          <span><a href="" class="class-vediff">VỀ DIFF</a></span>
-          <span><a href="" class="class-lichdien">LỊCH DIỄN</a></span>
-          <span><a href="" class="class-khampha">KHÁM PHÁ</a></span>
-          <span><a href="" class="class-tintuc">TIN TỨC</a></span>
+          <span><a href="#ve-diff" class="class-vediff">VỀ DIFF</a></span>
+          <span><a href="#lich-dien" class="class-lichdien">LỊCH DIỄN</a></span>
+          <span><a href="#kham-pha" class="class-khampha">KHÁM PHÁ</a></span>
+          <span><a href="https://diff.vn/category/tin-diff/" class="class-tintuc">TIN TỨC</a></span>
           <span>
             <span class="fi fi-vn" id="class-logo-vietnam"></span
             ><a href="" class="class-vietnam">VI</a></span
@@ -43,7 +55,7 @@
         </div>
       </div>
     </header>
-    <div class="container">
+    <div class="container" id="ve-diff">
       <div class="class-image">
         <img
           src="images/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-nguyen-quoc-dat-1536x921.jpg"
@@ -68,10 +80,11 @@
     <div class="container1">
       <div class="class-row">
         <div class="class-left">
-          <div class="class-box-img">
+          <div class="class-box-img" >
             <img
               class="img1"
-              src="https://danangfantasticity.com/wp-content/uploads/2026/06/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-vo-phuoc-tho-1536x972.jpg"
+              src="https://danangfantasticity.com/wp-content/uploads/2026/06/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-vo-phuoc-tho-1536x972.jpg" 
+              
               alt=""
             />
           </div>
@@ -79,20 +92,22 @@
             <img
               class="img2"
               src="https://danangfantasticity.com/wp-content/uploads/2026/06/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-04-1536x1039.jpg"
+           
               alt=""
             />
           </div>
-          <div class="class-box-img">
+          <div class="class-box-img" >
             <img
               class="img3"
               src="https://danangfantasticity.com/wp-content/uploads/2026/06/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-huynh-van-truyen-1536x914.jpg"
               alt=""
             />
           </div>
-          <div class="class-box-img">
+          <div class="class-box-img" >
             <img
               class="img4"
-              src="https://danangfantasticity.com/wp-content/uploads/2026/06/nhung-khung-hinh-an-tuong-cua-dem-thi-sang-tao-diff-2026-tran-tam-phuc-1536x978.jpg"
+              src="https://vstatic.vietnam.vn/vietnam/resource/IMAGE/2026/06/02/1780370623902_image2-3-1024x769.png"
+             
               alt=""
             />
           </div>
@@ -236,7 +251,7 @@
         </div>
       </div>
     </div>
-    <div class="container2">
+    <div class="container2" id="lich-dien">
       <div class="class-title-overal">
         <div class="class-row-1">
           <div class="class-left1">
@@ -652,11 +667,13 @@
           </div>
         </div>
         <div class="class-board2">
-          <div class="class-item1-1">
-            <h2 class="class-item1">A3 / A4</h2>
+          <div class="class-item1-1" data-aos="fade-up" data-aos-delay="0">
+           <div class="class-ticket-top">
+             <h2 class="class-item1">A3 / A4</h2>
             <p class="class-content-item1">
               Khu vực xa sân khấu, tầm nhìn toàn cảnh
             </p>
+           </div>
             <div class="class-price">1.000.000đ <span>/vé</span></div>
             <ul class="class-list-ticket">
               <li>Ghế ngồi</li>
@@ -669,9 +686,11 @@
               <button class="class-press-reserve">Đặt vé ngay</button>
             </a>
           </div>
-          <div class="class-item1-1">
-            <h2 class="class-item1">A1 / A2</h2>
+          <div class="class-item1-1" data-aos="fade-up" data-aos-delay="0">
+           <div class="class-ticket-top">
+             <h2 class="class-item1">A1 / A2</h2>
             <p class="class-content-item1">Khu vực trung tâm, tầm nhìn tốt</p>
+           </div>
             <div class="class-price1">1.500.000đ <span>/vé</span></div>
             <ul class="class-list-ticket1">
               <li>Ghế ngồi</li>
@@ -685,9 +704,11 @@
               <button class="class-press-reserve">Đặt vé ngay</button>
             </a>
           </div>
-          <div class="class-item1-1">
-            <h2 class="class-item1">A</h2>
+          <div class="class-item1-1" data-aos="fade-up" data-aos-delay="0">
+            <div class="class-ticket-top">
+              <h2 class="class-item1">A</h2>
             <p class="class-content-item1">Khu vực VIP gần sân khấu</p>
+            </div>
             <div class="class-price2">2.200.000đ<span>/vé</span></div>
             <ul class="class-list-ticket2">
               <li>Ghế ngồi VIP</li>
@@ -701,12 +722,14 @@
               <button class="class-press-reserve">Đặt vé ngay</button>
             </a>
           </div>
-          <div class="class-item1-2">
+          <div class="class-item1-2" data-aos="fade-up" data-aos-delay="0">
             <div class="premium-badge">
               <span class="crown-icon">👑</span> PREMIUM
             </div>
-            <h2 class="class-item1">AVIP</h2>
+            <div class="class-ticket-top">
+              <h2 class="class-item1">AVIP</h2>
             <p class="class-content-item1">Hạng cao cấp nhất với bàn riêng</p>
+            </div>
             <div class="class-price3">4.000.000đ<span>/vé</span></div>
             <ul class="class-list-ticket3">
               <li>Bàn riêng</li>
@@ -724,7 +747,7 @@
         </div>
       </div>
     </div>
-     <div class="container1">
+     <div class="container1" id="kham-pha">
       <div class="class-header-title">
         <p class="class-title-diff1">Khám phá</p>
             <p class="class-content-diff1">
@@ -733,7 +756,7 @@
       </div>
       <div class="class-row">
         <div class="class-left2">
-          <div class="class-box-img1">
+          <div class="class-box-img1" >
             <img
               class="img1"
               src="https://visitdanang.travel/google_docs_media/post/post-5577/AD_4nXfxLJXJM7BxGcL0FItz3j_K7wpBfSY21sIZQJU_G2BWs7osJ-diE_H6nhTSQmyc2uPRDXdGw4WuanTJN6rAk1r2l6UBaE3CxkPKQj9xcpslItE0NlPJ1H-4-wzg1wKiHwxcS2rFW74W1NwJuahaYLctanwD_MUXDAcLOCtuiaTMkoNi5YY.jpg"
@@ -744,7 +767,7 @@
     <p class="description">Thức dậy với bình minh và tiếng sóng bên bờ biển tại loạt khách sạn ven sông Hàn Đà Nẵng</p>
   </div>
           </div>
-          <div class="class-box-img1">
+          <div class="class-box-img1" >
             <img
               class="img2"
               src="https://buulong.com.vn/wp-content/uploads/2026/03/gioi-thieu-ve-am-thuc-viet-nam-4.jpg"
@@ -752,7 +775,7 @@
             />
             <div class="overlay">
     <h3 class="title">Ẩm thực phong phú</h3>
-    <p class="description">Từ mì quảng tới hải sản - dư vị biển miền trung khiến thực khách nào lòng</p>
+    <p class="description">Từ mì quảng tới hải sản - dư vị biển miền trung</p>
   </div>
           </div>
           <div class="class-box-img1">
@@ -842,12 +865,12 @@
 
       <div class="contact-item">
         <i class="fa-solid fa-phone"></i>
-        <span>1800-1000</span>
+        <span><a href="">1800-1000</a></span>
       </div>
 
       <div class="contact-item">
         <i class="fa-regular fa-envelope"></i>
-        <span>booking@sunworld.vn</span>
+        <span><a href="">booking@sunworld.vn</a></span>
       </div>
 
       <div class="contact-item">
@@ -866,5 +889,9 @@
   </div>
 
 </footer>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="script.js"></script>
   </body>
+  
 </html>
