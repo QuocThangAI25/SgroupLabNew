@@ -490,6 +490,7 @@ header.scrolled {
   cursor: pointer;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: all 0.3s ease;
+  animation: scare 1s infinite ease-in-out;
 }
 .class-button1 a {
   /* text-decoration: none;
@@ -498,6 +499,18 @@ header.scrolled {
   color: #120c1f;
   font-weight: bold;
   font-size: 16px;
+}
+@keyframes scare {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 4px 5px rgba(255, 255, 51, 0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 .class-button1:hover {
   background-color: #f7df05;
@@ -935,6 +948,13 @@ iframe {
   position: relative;
   z-index: 10;
 }
+.class-board1 a {
+  transition: all 0.1s linear;
+}
+.class-board1 a:hover {
+  transform: translateX(5px);
+}
+
 /* Thiết lập lại chiều cao và cách sắp xếp trong mỗi ô để đẩy nút xuống đáy */
 .container2 .class-item-1 {
   min-height: 380px;
@@ -2611,7 +2631,7 @@ iframe {
   .container {
     min-height: 100vh;
     margin-top: 0px;
-    height: 100vh;
+    height: 100dvh;
   }
 
   .container img {
@@ -2669,7 +2689,7 @@ iframe {
     vertical-align: middle;
   }
   .container1 {
-    margin-top: 0px;
+    margin-top: 50px;
     padding: 0 10px;
   }
   /* Container1 */
