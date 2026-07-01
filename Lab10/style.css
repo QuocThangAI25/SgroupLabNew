@@ -526,8 +526,10 @@ header.scrolled {
   gap: 8px;
 }
 .class-title3 img {
-  width: auto;
-  height: 40px;
+  width: auto !important;
+  height: 40px !important;
+  max-width: 120px !important;
+  object-fit: contain !important;
 }
 .container1 {
   width: 100%;
@@ -2117,7 +2119,17 @@ iframe {
     height: 70px;
     margin-left: 20px;
   }
+  .container {
+    min-height: 100vh;
+    height: 100vh;
+  }
 
+  .class-title-cha {
+    width: 92%;
+    max-width: 800px;
+    top: 48%;
+    transform: translate(-50%, -50%);
+  }
   .class-list-header {
     gap: 12px;
     margin-right: 20px;
@@ -2129,38 +2141,39 @@ iframe {
 
   /* Hero - chỉnh vị trí */
   .class-title {
-    font-size: 36px;
-    transform: translate(-50%, -600%);
+    font-size: clamp(28px, 4vw, 42px);
+    margin-bottom: 0;
   }
 
   .class-title1 {
-    font-size: 100px;
-    transform: translate(-50%, -120%);
-    width: 90%;
+    font-size: clamp(60px, 10vw, 110px);
+    line-height: 0.9;
   }
 
   .class-title1 span {
-    margin-left: 50px;
+    display: inline-block;
+    margin-left: 20px;
   }
-
   .class-title2 {
-    font-size: 16px;
-    transform: translate(-50%, 80%);
+    font-size: clamp(14px, 1.8vw, 18px);
+    margin-top: 20px;
   }
-
   .class-button1 {
-    transform: translate(-50%, 140%);
-    padding: 10px 25px;
+    margin-top: 20px;
+    padding: 10px 28px;
+  }
+  .class-button1 a {
     font-size: 15px;
   }
-
   .class-title3 {
-    transform: translate(-50%, 190%);
-    font-size: 13px;
+    font-size: clamp(12px, 1.4vw, 15px);
+    margin-top: 28px;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
-
   .class-title3 img {
-    height: 35px;
+    height: 32px;
   }
 
   /* Container1 - phần giới thiệu */
@@ -2274,30 +2287,35 @@ iframe {
 /* Mobile */
 @media screen and (max-width: 768px) {
   .class-header {
-    height: 60px;
+    height: 80px;
     padding: 0 10px;
   }
 
   .class-logo-header {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+    width: 100px;
+    height: 100px;
+    margin-left: 0;
   }
 
   .class-list-header {
-    gap: 8px;
+    gap: 12px;
     margin-right: 10px;
   }
 
   .class-list-header a {
-    font-size: 10px;
+    font-size: 18px;
   }
 
   /* Hero - chỉnh lại vị trí cho mobile */
   .container {
     min-height: 100vh;
-    margin-top: 60px;
     height: 100vh;
+  }
+  .class-title-cha {
+    width: 92%;
+    max-width: 800px;
+    top: 48%;
+    transform: translate(-50%, -50%);
   }
 
   .container img {
@@ -2306,45 +2324,61 @@ iframe {
   }
 
   .class-title {
-    font-size: 24px;
-    transform: translate(-50%, -500%);
+    font-size: 44px;
+    transform: translate(0%, 200%);
   }
 
   .class-title1 {
-    font-size: 60px;
-    transform: translate(-50%, -80%);
+    font-size: 100px;
+    transform: translate(0%, 60%);
     width: 85%;
-    line-height: 0.9;
   }
 
   .class-title1 span {
     margin-left: 0;
-    display: block;
   }
 
   .class-title2 {
     font-size: 14px;
-    transform: translate(-50%, 50%);
+    transform: translate(0%, 550%);
     width: 85%;
   }
 
   .class-button1 {
-    transform: translate(-50%, 120%);
+    transform: translate(0%, 300%);
     padding: 8px 20px;
     font-size: 13px;
   }
 
   .class-title3 {
-    transform: translate(-50%, 170%);
-    font-size: 11px;
-    gap: 5px;
+    transform: translate(0%, 10px);
+    font-size: 12px;
+    gap: 6px;
     flex-wrap: wrap;
     justify-content: center;
     white-space: normal;
+    margin-top: 12px;
+    position: relative;
+    z-index: 5;
   }
-
+  .class-title3 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 120px;
+    vertical-align: middle;
+  }
   .class-title3 img {
-    height: 25px;
+    width: auto !important;
+    height: 22px !important;
+    max-height: 22px !important;
+    max-width: 120px !important;
+    object-fit: contain !important;
+    display: inline-block;
+    vertical-align: middle;
+    transform: translate(0%, 50px);
   }
 
   /* Container1 */
@@ -2353,9 +2387,19 @@ iframe {
     padding: 0 12px;
   }
 
+  .class-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
   .class-left {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
+    width: calc(60% - 10px) !important;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: 250px 180px;
     gap: 12px;
   }
 
@@ -2363,9 +2407,18 @@ iframe {
   .class-left .img2,
   .class-left .img3,
   .class-left .img4 {
-    grid-column: 1 !important;
-    grid-row: auto !important;
-    height: 180px;
+    height: auto;
+    min-height: 180px;
+  }
+
+  .class-right {
+    width: calc(40% - 10px) !important;
+    margin-top: 0 !important;
+  }
+
+  .video-box iframe {
+    width: 100%;
+    height: 250px;
   }
 
   .class-right h2 {
@@ -2373,7 +2426,7 @@ iframe {
   }
 
   .video-box iframe {
-    height: 180px;
+    height: 300px;
   }
 
   .class-content {
@@ -2557,49 +2610,83 @@ iframe {
   /* Hero */
   .container {
     min-height: 100vh;
-    margin-top: 50px;
+    margin-top: 0px;
     height: 100vh;
   }
 
   .container img {
     min-height: 250px;
+    height: 800px;
     object-position: center 25%;
   }
 
   .class-title {
-    font-size: 18px;
-    transform: translate(-50%, -450%);
+    font-size: 34px;
+    transform: translate(0%, -100%);
   }
 
   .class-title1 {
-    font-size: 40px;
-    transform: translate(-50%, -60%);
+    font-size: 70px;
+    transform: translate(0%, -10%);
     width: 90%;
   }
 
   .class-title2 {
     font-size: 12px;
-    transform: translate(-50%, 30%);
+    transform: translate(0%, 10%);
     width: 90%;
   }
 
   .class-button1 {
-    transform: translate(-50%, 100%);
+    transform: translate(0%, 50%);
     padding: 6px 16px;
     font-size: 11px;
   }
 
   .class-title3 {
-    transform: translate(-50%, 150%);
-    font-size: 10px;
-    gap: 4px;
+    transform: translate(0%, -20%) !important;
+    font-size: 11px;
+    gap: 6px;
+  }
+
+  .class-title3 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    max-width: 120px;
+    vertical-align: middle;
   }
 
   .class-title3 img {
-    height: 20px;
+    width: auto !important;
+    height: 20px !important;
+    max-height: 20px !important;
+    max-width: 120px !important;
+    object-fit: contain !important;
+    display: inline-block;
+    vertical-align: middle;
+  }
+.container1 {
+    margin-top: 0px;
+    padding: 0 10px;
+  }
+  /* Container1 */
+  .class-row {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
   }
 
-  /* Container1 */
+  .class-left {
+    width: 100% !important;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 150px);
+    gap: 12px;
+  }
+
   .class-left .img1,
   .class-left .img2,
   .class-left .img3,
@@ -2607,12 +2694,17 @@ iframe {
     height: 150px;
   }
 
+  .class-right {
+    width: 100% !important;
+    margin-top: 0 !important;
+  }
+
   .class-right h2 {
     font-size: 20px;
   }
 
   .video-box iframe {
-    height: 150px;
+    height: 250px;
   }
 
   /* Container2 */
