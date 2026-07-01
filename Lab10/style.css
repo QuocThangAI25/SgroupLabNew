@@ -2622,23 +2622,23 @@ iframe {
 
   .class-title {
     font-size: 34px;
-    transform: translate(0%, -100%);
+    transform: translate(0%, 50%);
   }
 
   .class-title1 {
     font-size: 70px;
-    transform: translate(0%, -10%);
+    transform: translate(0%, 30%);
     width: 90%;
   }
 
   .class-title2 {
     font-size: 12px;
-    transform: translate(0%, 10%);
+    transform: translate(0%, 200%);
     width: 90%;
   }
 
   .class-button1 {
-    transform: translate(0%, 50%);
+    transform: translate(0%, 100%);
     padding: 6px 16px;
     font-size: 11px;
   }
@@ -2668,7 +2668,7 @@ iframe {
     display: inline-block;
     vertical-align: middle;
   }
-.container1 {
+  .container1 {
     margin-top: 0px;
     padding: 0 10px;
   }
