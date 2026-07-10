@@ -2588,9 +2588,32 @@ iframe {
     font-size: 14px;
   }
 }
+.menu-toggle {
+  display: none; /* Mặc định ẩn */
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* Đảm bảo nút luôn nằm trên cùng */
+}
 
+/* Tạo 3 vạch ngang màu trắng */
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: 0.3s ease; /* Tạo hiệu ứng mượt mà */
+}
 /* Mobile nhỏ */
 @media screen and (max-width: 480px) {
+  .menu-toggle {
+    display: flex;
+  }
   .class-header {
     height: 50px;
     padding: 0 8px;
@@ -2600,14 +2623,25 @@ iframe {
   }
 
   .class-logo-header {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+    margin-left: 0px;
+  }
+  .class-logo-header img {
     margin-left: 0px;
   }
 
   .class-list-header {
-    gap: 5px;
-    margin-right: 5px;
+    display: none; /* Ẩn menu chữ đi */
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Khoảng cách từ đỉnh xuống, tùy thuộc độ cao header của bạn */
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 15, 30, 0.95); /* Màu nền tối để nổi bật chữ */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
   .class-list-header a {
@@ -2615,7 +2649,11 @@ iframe {
   }
 
   .class-list-header span {
-    font-size: 9px;
+    display: block;
+    margin: 12px 0;
+  }
+  .class-list-header.show {
+    display: flex;
   }
 
   /* Hero */

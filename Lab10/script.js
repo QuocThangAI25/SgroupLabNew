@@ -97,3 +97,12 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     }
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const menuBtn = document.getElementById("menuBtn");
+  const menuList = document.getElementById("menuList");
+
+  menuBtn.addEventListener("click", function () {
+    // Bật/tắt class "show" để ẩn hiện menu chữ
+    menuList.classList.toggle("show");
+  });
+});
