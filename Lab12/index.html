@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Front-End Developer</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Font chữ Inter từ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome để lấy các icon mạng xã hội -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Background Grid Pattern -->
+    <div class="bg-pattern"></div>
+
+    <!-- Header -->
+    <header class="header">
+      <!-- Khối 1: Bên trái -->
+      <div class="logo">
+        <span class="logo-icon">T</span>
+        <span class="logo-text">TopLene</span>
+      </div>
+
+      <!-- Khối 2: Bên phải -->
+      <div class="header-right">
+        <div class="social-icons">
+          <a href="https://github.com/quocthangai25"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        </div>
+        <button class="btn-quick">
+          <i class="fa-solid fa-border-all"></i> Quick access
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <!-- MAIN CONTAINER (Bao bọc toàn bộ nội dung trang) -->
+    <main>
+      <!-- 1. HERO SECTION -->
+      <section class="hero" id="hero">
+        <div class="container hero-container">
+          <!-- Cột trái: Thông tin -->
+          <div class="hero-content">
+            <h3 class="hero-greeting">
+              hi! <span class="wave-emoji">✌️</span>
+            </h3>
+            <h1 class="hero-title reveal-left">
+              I'm <span class="highlight">Thắng</span> Devlor,
+            </h1>
+            <p class="hero-description reveal-left delay-1">
+              a <strong>front-end developer</strong> who loves exploring,
+              building beautiful web applications.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-buttons reveal-left delay-2">
+              <a
+                href="https://www.linkedin.com/in/nguy%E1%BB%85n-qu%E1%BB%91c-th%E1%BA%AFng-b49872411/"
+                class="btn btn-primary"
+                >About me</a
+              >
+              <a href="#contact" class="link-contact">
+                <span>👋 CONTACT</span>
+                <div class="contact-icons">
+                  <i class="fa-brands fa-linkedin"></i>
+                  <i class="fa-brands fa-facebook"></i>
+                </div>
+              </a>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack reveal-left delay-3">
+              <p class="tech-title">My favorite tech stack & tools:</p>
+              <div class="tech-icons">
+                <i class="fa-brands fa-vuejs" title="Vue.js"></i>
+                <i class="fa-solid fa-bolt" title="Vite"></i>
+                <i
+                  class="fa-brands fa-css3-alt"
+                  title="Tailwind CSS / CSS3"
+                ></i>
+                <span class="badge-ts" title="TypeScript">TS</span>
+                <i class="fa-brands fa-figma" title="Figma"></i>
+                <i class="fa-brands fa-git-alt" title="Git"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cột phải: Ảnh đại diện & Floating elements -->
+          <div class="hero-visual reveal-right delay-1">
+            <div class="avatar-wrapper">
+              <!-- Hình khối nền phía sau ảnh -->
+              <div class="avatar-bg"></div>
+
+              <!-- Ảnh đại diện -->
+              <img
+                src="img/Foto de perfil instagram profesional minimalista beige (1).png"
+                alt="Profile"
+                class="avatar-img"
+              />
+
+              <!-- Icon trôi nổi xung quanh -->
+              <div class="floating-badge float-1">
+                <span class="ts-text">TS</span>
+              </div>
+              <div class="floating-badge float-2">
+                <i class="fa-brands fa-vuejs" style="color: #42b883"></i>
+              </div>
+              <div class="floating-badge float-3">🍍</div>
+              <div class="floating-badge float-4">⚡</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. VALUES / FEATURES SECTION (3 thẻ khoanh tròn) -->
+      <section class="features-section reveal-up">
+        <div class="container features-container">
+          <div class="feature-card delay-0">
+            <div class="feature-badge badge-amber">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Clean & Intuitive</h3>
+              <p>
+                Keep the UI clean with a modern touch without compromising UX.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card delay-1">
+            <div class="feature-badge badge-pink">
+              <i class="fa-solid fa-bezier-curve"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Detail Oriented</h3>
+              <p>
+                Awareness to ease of access, UI consistency, and improved UX.
+              </p>
+            </div>
+          </div>
+
+          <div class="feature-card delay-2">
+            <div class="feature-badge badge-blue">
+              <i class="fa-solid fa-code"></i>
+            </div>
+            <div class="feature-content">
+              <h3>Pretty & Optimized</h3>
+              <p>
+                Writing clean code is a top priority while keeping it as
+                optimized as possible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. FEATURED PROJECTS SECTION (Dự án nổi bật Bento Grid) -->
+      <section class="projects-section" id="projects">
+        <div class="container">
+          <!-- THẺ BỌC LƯỚI BENTO GRID (BẮT BUỘC PHẢI CÓ) -->
+          <div class="projects-grid">
+            <!-- MAIN PROJECT (LEFT) -->
+            <div class="project-card main-project reveal-left">
+              <div class="project-image-wrapper">
+                <img
+                  src="img/Screenshot 2026-07-27 111728.png"
+                  alt="DIFF 2026 Landing Page"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag">HTML5/CSS3</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">UI/UX Design</span>
+                </div>
+                <h3 class="project-name">DIFF 2026 - United Horizons</h3>
+                <p class="project-desc">
+                  Official landing page for the Da Nang International Fireworks
+                  Festival 2026. Features an immersive design, event schedule,
+                  ticket booking portal, and full responsiveness across all
+                  devices.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://quocthangai25.github.io/SgroupLabNew/Lab10/"
+                    class="btn-demo"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Live
+                    Demo
+                  </a>
+                  <a
+                    href="https://github.com/quocthangai25/SgroupLabNew"
+                    class="btn-code"
+                    target="_blank"
+                  >
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- DỰ ÁN NHỎ 1 (Bên phải trên) -->
+            <!-- DỰ ÁN NHỎ 1 (Bên phải trên - Minimalist Personal Portfolio) -->
+            <div class="project-card sub-project reveal-right delay-1">
+              <div class="project-image-wrapper">
+                <!-- Bạn nhớ lưu ảnh vừa gửi vào thư mục img/ và thay tên file tương ứng nhé -->
+                <img
+                  src="img/Screenshot 2026-07-27 113035.png"
+                  alt="Jason Stroff Portfolio"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag">HTML/CSS</span>
+                  <span class="tag">UI/UX Design</span>
+                  <span class="tag">Responsive</span>
+                </div>
+                <h3 class="project-name">Minimalist Developer Portfolio</h3>
+                <p class="project-desc">
+                  A clean, modern portfolio template focusing on typography,
+                  personal branding, and interactive statistics showcase.
+                </p>
+                <div class="project-links">
+                  <a
+                    href="https://quocthangai25.github.io/SgroupLabNew/Lab3/"
+                    class="btn-demo"
+                    target="_blank"
+                  >
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                  <a href="#" class="btn-code" target="_blank">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- DỰ ÁN NHỎ 2 (Bên phải dưới) -->
+            <!-- DỰ ÁN NHỎ 2 (Bên phải dưới - Interactive Memory Game) -->
+            <div class="project-card sub-project reveal-up delay-2">
+              <div class="project-image-wrapper">
+                <!-- Đường dẫn đến ảnh chụp màn hình game Lật Ảnh - Lật Chữ -->
+                <img
+                  src="img/Screenshot 2026-07-27 141401.png"
+                  alt="Memory Card Game"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-tags">
+                  <span class="tag">JavaScript (ES6+)</span>
+                  <span class="tag">DOM Manipulation</span>
+                  <span class="tag">Game Logic</span>
+                </div>
+                <h3 class="project-name">Flip & Match - Memory Game</h3>
+                <p class="project-desc">
+                  An interactive memory matching minigame featuring dynamic
+                  topic selection, flip animations, moves counter, and real-time
+                  score tracking.
+                </p>
+                <div class="project-links">
+                  <a href="#" class="btn-demo" target="_blank">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Demo
+                  </a>
+                  <a href="#" class="btn-code" target="_blank">
+                    <i class="fa-brands fa-github"></i> Code
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Đóng .projects-grid -->
+        </div>
+        <!-- Đóng .container -->
+      </section>
+    </main>
+    <footer class="site-footer">
+      <!-- Thay lớp container thành footer-content-full -->
+      <div class="footer-content-full">
+        <!-- Cột trái: About me -->
+        <div class="footer-about reveal-left">
+          <h3 class="footer-title">About me</h3>
+          <p class="footer-desc">
+            I'm Quoc Thang, a <strong>front-end developer</strong> from Viet
+            Nam. I have rich experience in web site design and building and
+            customization.
+          </p>
+          <div class="footer-socials">
+            <a
+              href="https://github.com/quocthangai25"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="#" target="_blank" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Cột phải: Discovery & This site -->
+        <div class="footer-links-group reveal-right">
+          <div class="footer-column">
+            <h4 class="column-title">Discovery</h4>
+            <ul class="footer-links">
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h4 class="column-title">This site</h4>
+            <ul class="footer-links">
+              <li>
+                <a
+                  href="https://github.com/quocthangai25/SgroupLabNew"
+                  target="_blank"
+                  >Source code</a
+                >
+              </li>
+              <li>
+                <a href="https://github.com/quocthangai25" target="_blank"
+                  >My github</a
+                >
+              </li>
+              <li>
+                <a href="#" target="_blank">
+                  Design credit
+                  <i class="fa-solid fa-arrow-up-right-from-square icon-sm"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Dòng copyright phía dưới cũng tràn rộng -->
+      <div class="footer-content-full footer-bottom">
+        <p class="copyright">&copy; 2026 quocthangai25</p>
+        <div class="footer-badge">
+          <span>See recent update on github</span>
+          <span class="badge-count">Profile views 1,000</span>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
